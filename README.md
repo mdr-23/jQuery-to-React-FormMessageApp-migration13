@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Form-Message App - jQuery to React Migration
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a migration of the Form App from jQuery to React. The original implementation used jQuery for handling form submission and displaying an alert message. Now, it has been migrated to React, utilizing React's state and components.
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+- React
+- JavaScript
+- CSS
 
-### `npm start`
+## Migration Process
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The migration involved the following steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Set up a new React project using `create-react-app`.
+2. Created a new `App` component as the entry point of the application.
+3. Refactored the HTML structure of the form using React components and JSX syntax.
+4. Replaced the jQuery code with React state and event handlers.
+5. Created state variables to store the form input values and alert message.
+6. Implemented event handlers to update the state variables based on user input and form submission.
+7. Utilized the `fetch` API to simulate form submission to a fictitious server.
+8. Added CSS styles to achieve the desired form layout and appearance.
+9. Created a new `AlertCustom` component to display the alert message.
+10. Conditionally rendered the `AlertCustom` component based on form validation and submission.
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To use the Form App, follow these steps:
 
-### `npm run build`
+1. Clone the repository.
+2. Install the dependencies using `npm install`.
+3. Run the application using `npm start`.
+4. Open the application in your browser at `http://localhost:3000`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Acknowledgements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This migration was done as a learning exercise to understand the process of migrating from jQuery to React. The original Form App was created using jQuery and served as a basis for the migration process.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Conclusion
 
-### `npm run eject`
+The migration from jQuery to React has allowed us to take advantage of the benefits of a modern JavaScript framework, such as improved performance, better organization of code, and easier maintenance. The React components and state management provide a more structured and declarative approach to building interactive forms.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+By completing this migration, we have successfully transformed the original jQuery-based application into a more scalable, maintainable, and efficient React application.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License. You are free to use, modify, and distribute this code as you wish.

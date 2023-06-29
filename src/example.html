@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form App</title>
+  <style>
+    /* CSS Styles */
+    .form-container {
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+    }
+
+    .form-group button {
+      padding: 5px 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .form-group button:hover {
+      background-color: #45a049;
+    }
+
+    .form-group p {
+      margin: 5px 0;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Form App</h1>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" id="email" placeholder="Enter your email">
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <input type="text" id="message" placeholder="Enter your message">
+    </div>
+    <div class="form-group">
+      <button id="submit-btn">Submit</button>
+      <p id="status"></p>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#submit-btn').click(function() {
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var message = $('#message').val();
+
+        if (name && email && message) {
+          // Perform AJAX request to submit the form data
+          $.ajax({
+            url: '/submit',
+            method: 'POST',
+            data: { name: name, email: email, message: message },
+            success: function(response) {
+              $('#status').text('Form submitted successfully');
+              $('#name').val('');
+              $('#email').val('');
+              $('#message').val('');
+            },
+            error: function(xhr, status, error) {
+              $('#status').text('An error occurred. Please try again.');
+            }
+          });
+        } else {
+          $('#status').text('Please fill in all fields');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
